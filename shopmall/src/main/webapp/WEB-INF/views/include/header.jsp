@@ -7,7 +7,7 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="${path}/resources/css/style.css">
 <link rel="stylesheet" href="${path}/resources/css/header.css">
 </head>
 <body>
@@ -17,13 +17,13 @@
 				<div class="inner">
 					<ul class="gnb">
 						<li class="index_login">
-							<a href="#" class="log">로그인</a>
+							<a href="member/login" class="log">로그인</a>
 						</li>
 	
 						<li class="index_join">
 							<a href="#">회원가입</a>
 							<div class="msgbox">
-								<img src="img/2000p.png">
+								<img src="${path}/resources/img/2000p.png">
 							</div>
 						</li>
 						<li>
@@ -35,7 +35,7 @@
 						</li>
 						<li class="myshop" >
 							<span class="bar">
-								<img src="img/bg_result_type.gif">
+								<img src="${path}/resources/img/bg_result_type.gif">
 							</span>
 							<a href="#">마이페이지</a>
 							<ul class="mnb">
@@ -61,7 +61,7 @@
 						</li>
 						<li class="community">
 							<span class="bar">
-								<img src="img/bg_result_type.gif">
+								<img src="${path}/resources/img/bg_result_type.gif">
 							</span>
 	
 							<a href="#">커뮤니티</a>
@@ -130,7 +130,7 @@
  				<h1 class="top_logo">
  					<a href="#" class="logo">
  						<span>
- 							<img src="img/logo.jpg">
+ 							<img src="${path}/resources/img/logo.JPG">
  						</span>
  					</a>
  				</h1>
@@ -140,33 +140,11 @@
  	
  			<div id="lnb" style="top:43px;">
  				<div class="position">
- 					 <div class="hamburger closed">
-						  <div class="burger-main" style="padding: 0 0;">
-						    <div class="burger-inner">
-						      <span class="top"></span>
-						      <span class="mid"></span>
-						      <span class="bot"></span>
-						    </div>
-						  </div>
-
-						  <div class="svg-main">
-						    <svg class="svg-circle">
-						    <path class="path" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="4" d="M 34 2 C 16.3 2 2 16.3 2 34 s 14.3 32 32 32 s 32 -14.3 32 -32 S 51.7 2 34 2"/>
-						    </svg>
-						  </div>
-						  <div class="path-burger">
-						    <div class="animate-path">
-						      <div class="path-rotation"></div>
-						    </div>
-						  </div>
-						
-
- 						<div class="m1">
- 							<ul class="catagory_layout">
- 								<li></li>
- 							</ul>
- 						</div>
-					</div>
+			        <div class="hamburger" id="hamburger-9">
+			          <span class="line"></span>
+			          <span class="line"></span>
+			          <span class="line"></span>
+			        </div>
 
  					<div id="cnb" style="opacity: 1; visibility: visible;">
  						<div class="m1">
@@ -257,6 +235,13 @@
  			</div>
 		
 	</div>
-<script  src="js/index.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+		  $(".hamburger").click(function(){
+		    $(this).toggleClass("is-active");
+		  });
+			});
+
+	</script>
 </body>
 </html>
