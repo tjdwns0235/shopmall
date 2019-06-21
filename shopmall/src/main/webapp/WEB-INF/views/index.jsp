@@ -6,12 +6,19 @@
 <head>
 <meta charset="UTF-8">
 <title>ALLDAY, LALAEL</title>
-<script type="text/javascript" src="js/owl.carousel.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 <style type="text/css">
 	body , * {
 		margin: 0 0;
 		list-style: none;
 		text-decoration:none;
+	}
+	#main {
+		margin:180px 0 0 0;	
 	}
 	#container {
 		position: relative;
@@ -35,6 +42,11 @@
 	.bx_viewport > ul li {
 		width: 100%!important;
 	}
+	.carousel {
+	    margin: 15px auto;
+	    position: relative;
+	    width: 1100px;
+	}
 
 
 </style>
@@ -44,72 +56,70 @@
 		<div id="container">
 			<div id="visual_main">
 				<div class="df_wildslider" style="opacity: 1; visibility: visible;">
-					<div class="bx_wrapper" style="max-width: 100%;">
-						<div class="bx_viewport owl_carousel" style="width: 100%; overflow: hidden; position: relative; height: 650px;">
-							<ul style="width: auto; position: relative; " class="wildslider">
-								<li style="float: none; list-style: none; position: absolute; width: 1903px; z-index: 0; display: none;">
-									<a href="#">
-										<img class="banner_image" src="img/banner_1.JPG">
-									</a>
-								</li>
-								<li style="float: none; list-style: none; position: absolute; width: 1903px; z-index: 0; display: none;">
-									<a href="#">
-										<img class="banner_image" src="img/banner_2.JPG">
-									</a>
-								</li>
-								<li style="float: none; list-style: none; position: absolute; width: 1903px; z-index: 0; display: none;">
-									<a href="#">
-										<img class="banner_image" src="img/banner_3.JPG">
-									</a>
-								</li>
-								<li style="float: none; list-style: none; position: absolute; width: 1903px; z-index: 0; display: none;">
-									<a href="#">
-										<img class="banner_image" src="img/banner_4.JPG">
-									</a>
-								</li>
-							</ul>
-						</div>
-						
-						<div class="bx_controller">
-							<div class="bx_pager">
-								<div class="pager_item">
-									<a class="bx_pager_link">
-										<span class="bar"></span>
-										<span class="timer" style="width: 0px;"></span>
-									</a>
-								</div>
-								<div class="pager_item">
-									<a class="bx_pager_link">
-										<span class="bar"></span>
-										<span class="timer" style="width: 0px;"></span>
-									</a>
-								</div>
-								<div class="pager_item">
-									<a class="bx_pager_link">
-										<span class="bar"></span>
-										<span class="timer" style="width: 0px;"></span>
-									</a>
-								</div>
-								<div class="pager_item">
-									<a class="bx_pager_link">
-										<span class="bar"></span>
-										<span class="timer" style="width: 0px;"></span>
-									</a>
-								</div>
-							</div>
-							<div class="bx_controller_dr">
-								<a class="bx_prev">
-								<img src="img/btn_wideslider_prev.png" style="width: 20px; height: 30px;">
-							</a>
-							<a class="bx_next">
-								<img src="img/btn_wideslider_next.png" style="width: 20px; height: 30px;">
-							</a>
-							</div>
-						</div>
+					<div id="demo" class="carousel slide" data-ride="carousel">
+						<!-- Indicators -->
+					    <ul class="carousel-indicators">
+							<li data-target="#demo" data-slide-to="0" class="active"></li>
+					        <li data-target="#demo" data-slide-to="1"></li>
+						    <li data-target="#demo" data-slide-to="2"></li>
+						    <li data-target="#demo" data-slide-to="3"></li>
+					    </ul>
+					  
+					  	<!-- The slideshow -->
+					    <div class="carousel-inner">
+						    <div class="carousel-item active">
+					        	<img src="${path}/resources/img/banner_1.JPG"  width="1100" height="500">
+						    </div>
+						    <div class="carousel-item">
+					      		<img src="${path}/resources/img/banner_2.JPG"  width="1100" height="500">
+						    </div>
+						    <div class="carousel-item">
+					        	<img src="${path}/resources/img/banner_3.JPG"  width="1100" height="500">
+						    </div>
+						    <div class="carousel-item">
+					        	<img src="${path}/resources/img/banner_4.JPG"  width="1100" height="500">
+						    </div>
+					  	</div>	
+					  
+					 	<!-- Left and right controls -->
+					  	<a class="carousel-control-prev" href="#demo" data-slide="prev">
+					    	<span class="carousel-control-prev-icon"></span>
+					  	</a>
+					  	<a class="carousel-control-next" href="#demo" data-slide="next">
+					   	 	<span class="carousel-control-next-icon"></span>
+					  	</a>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
+	<script type="text/javascript">
+		$(document).ready(function(){
+		  // Activate Carousel
+		  $("#myCarousel").carousel();
+		    
+		  // Enable Carousel Indicators
+		  $(".item1").click(function(){
+		    $("#myCarousel").carousel(0);
+		  });
+		  $(".item2").click(function(){
+		    $("#myCarousel").carousel(1);
+		  });
+		  $(".item3").click(function(){
+		    $("#myCarousel").carousel(2);
+		  });
+		   $(".item4").click(function(){
+		    $("#myCarousel").carousel(3);
+		  });
+		    
+		  // Enable Carousel Controls
+		  $(".carousel-control-prev").click(function(){
+		    $("#myCarousel").carousel("prev");
+		  });
+		  $(".carousel-control-next").click(function(){
+		    $("#myCarousel").carousel("next");
+		  });
+		});
+	</script>
 </body>
 </html>
