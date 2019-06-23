@@ -21,7 +21,7 @@
 						</li>
 	
 						<li class="index_join">
-							<a href="#">회원가입</a>
+							<a href="member/join">회원가입</a>
 							<div class="msgbox">
 								<img src="${path}/resources/img/2000p.png">
 							</div>
