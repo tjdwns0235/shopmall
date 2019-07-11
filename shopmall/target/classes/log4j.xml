@@ -11,7 +11,7 @@
 	</appender>
 	
 	<!-- Application Loggers -->
-	<logger name="com.spring01.controller">
+	<logger name="com.shopmall.controller">
 		<level value="info" />
 	</logger>
 	
